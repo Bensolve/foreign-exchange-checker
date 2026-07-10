@@ -1,0 +1,118 @@
+  @font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/jetbrains-mono/jetbrains-mono-variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+
+
+
+  /* Neutral */
+  --neutral-900: #0A0A0A;
+  --neutral-700: #171719;
+  --neutral-600: #202022;
+  --neutral-500: #2E2E2E;
+  --neutral-400: #3D3D3D;
+  --neutral-300: #454547;
+  --neutral-200: #9D9D9D;
+  --neutral-100: #C6C6C6;
+  --neutral-50:  #FFFFFF;
+
+  /* Lime */
+  --lime-500: #CEF739;
+  --lime-800: #283300;
+
+  /* Green */
+  --green-500: #42EB05;
+
+  /* Red */
+  --red-500: #FF4141;
+
+
+  /* Radius */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
+
+
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-025: 2px;
+  --spacing-050: 4px;
+  --spacing-075: 6px;
+  --spacing-100: 8px;
+  --spacing-125: 10px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1400: 112px;
+  --spacing-1600: 128px;
+  --spacing-1800: 140px;
+
+
+  /* Typography */
+  --font: 'JetBrains Mono', monospace;
+
+  /* Text Presets */
+  --text-1-size: 40px;
+  --text-1-weight: 700;
+  --text-1-line-height: 100%;
+  --text-1-letter-spacing: -0.5px;
+
+  --text-1-tablet-size: 32px;
+  --text-1-tablet-weight: 700;
+
+  --text-2-size: 20px;
+  --text-2-weight: 400;
+  --text-2-line-height: 120%;
+  --text-2-letter-spacing: -0.5px;
+
+  --text-2-bold-weight: 700;
+  --text-2-bold-line-height: 140%;
+
+  --text-3-size: 16px;
+  --text-3-weight: 400;
+  --text-3-line-height: 120%;
+  --text-3-letter-spacing: 1px;
+
+  --text-3-medium-weight: 500;
+  --text-3-bold-weight: 700;
+  --text-3-bold-line-height: 110%;
+
+  --text-4-size: 14px;
+  --text-4-weight: 400;
+  --text-4-line-height: 120%;
+  --text-4-letter-spacing: 1px;
+
+  --text-5-size: 12px;
+  --text-5-weight: 400;
+  --text-5-line-height: 120%;
+  --text-5-letter-spacing: 0.5px;
+
+  --text-5-medium-weight: 500;
+  --text-5-medium-line-height: 130%;
+
+  --text-6-size: 10px;
+  --text-6-weight: 400;
+  --text-6-line-height: 100%;
+  --text-6-letter-spacing: 0px;
+}
+
+
