@@ -95,7 +95,9 @@
    display: inline-flex;
   align-items: center;
   gap: var(--spacing-075);
-  padding: 0 var(--spacing-150) 0 var(--spacing-150);
+  padding:  var(--spacing-150)  var(--spacing-150);
+
+  border-left: 1px solid var(--neutral-700);
 }
 
 .ticker__pair {
@@ -120,14 +122,21 @@
 }
 
 
+.main{
+
+  padding-inline: var(--spacing-200);
+  
+ 
+
+}
 
 .converter__title {
-  font-size: var(--text-1-size); 
-   font-weight: var(--text-1-weight);
-  letter-spacing: var(--text-1-letter-spacing);
+  font-size: var(--text-2-size); 
+   font-weight: var(--text-2-weight);
+  letter-spacing: var(--text-2-letter-spacing);
   text-transform: uppercase;
   color: var(--neutral-50);
-  margin-bottom: var(--spacing-200);
+  margin: var(--spacing-200) 0;
 }
 
 .converter__card {
@@ -991,6 +1000,10 @@
    .ticker__label,
   .ticker__item {
     padding: var(--spacing-150) var(--spacing-250);
+  }
+
+  .converter{
+    padding: var(--spacing-400) var(--spacing-250);
   }
 
   /* Converter side by side */
