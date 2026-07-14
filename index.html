@@ -17,223 +17,232 @@
 
 <body>
 
-  <!-- Header -->
-  <header class="header" aria-label="FX Checker header">
-    <img src="./assets/images/logo.svg" alt="FX Checker" class="header__logo">
-    <p class="header__meta">
-      <span class="header__currency-count" id="currency-count">55</span> Currencies · EOD · ECB data
-    </p>
-  </header>
+  
 
-  <!-- Live markets ticker -->
-  <section class="ticker" aria-label="Live markets ticker">
-    <span class="ticker__label">
-      <span class="ticker__dot"></span>
-      Live markets
-    </span>
-    <div class="ticker__track">
-      <ul class="ticker__list" id="ticker-list">
-        <!-- Dynamic: populated by JS -->
-      </ul>
-    </div>
-  </section>
 
-  <main class="main">
+    <!-- Header -->
+    <header class=" wrapper header" aria-label="FX Checker header">
+      <img src="./assets/images/logo.svg" alt="FX Checker" class="header__logo">
+      <p class="header__meta">
+        <span class="header__currency-count" id="currency-count">55</span> Currencies · EOD · ECB data
+      </p>
+    </header>
 
-    <!-- Converter -->
-    <section class="converter" aria-label="Currency converter">
-      <h1 class="converter__title">Check the rate</h1>
-
-      <div class="converter__cards">
-        <div class="converter__card">
-          <label class="converter__label" for="send-amount">Send</label>
-          <div class="converter__row">
-            <input class="converter__amount" id="send-amount" type="text" value="1,000" aria-label="Amount to send">
-            <button class="currency-btn" id="send-currency-btn" aria-label="Select send currency"
-              aria-haspopup="dialog">
-              <span class="currency-btn__flag" id="send-flag"></span>
-              <span class="currency-btn__code" id="send-code">USD</span>
-              <img src="./assets/images/icon-chevron-down.svg" alt="" aria-hidden="true">
-            </button>
-          </div>
-        </div>
-
-        <div class="converter__swap">
-          <button class="swap-btn" id="swap-btn" aria-label="Swap send and receive currencies">
-            <img src="./assets/images/icon-exchange-vertical.svg" alt="" aria-hidden="true">
-          </button>
-        </div>
-
-        <div class="converter__card">
-          <p class="converter__label">Receive</p>
-          <div class="converter__row">
-            <span class="converter__amount converter__amount--receive" id="receive-amount" aria-live="polite"
-              aria-label="Converted amount">853.00</span>
-            <button class="currency-btn" id="receive-currency-btn" aria-label="Select receive currency"
-              aria-haspopup="dialog">
-              <span class="currency-btn__flag" id="receive-flag"></span>
-              <span class="currency-btn__code" id="receive-code">EUR</span>
-              <img src="./assets/images/icon-chevron-down.svg" alt="" aria-hidden="true">
-            </button>
-          </div>
-        </div>
+    <!-- Live markets ticker -->
+    <section class="ticker" aria-label="Live markets ticker">
+      <span class="ticker__label">
+        <span class="ticker__dot"></span>
+        Live markets
+      </span>
+      <div class="ticker__track">
+        <ul class="ticker__list" id="ticker-list">
+          <!-- Dynamic: populated by JS -->
+        </ul>
       </div>
-
-      <div class="converter__bottom">
-        <p class="converter__rate" id="rate-display" aria-live="polite">1 USD = 0.8530 EUR</p>
-        <div class="converter__actions">
-          <button class="btn-fav" id="fav-btn" aria-pressed="false">
-            <img src="./assets/images/icon-star-filled.svg" alt="" aria-hidden="true">
-            <span id="fav-text">Favorited</span>
-          </button>
-          <button class="btn-log" id="log-btn">Log conversion</button>
-        </div>
-      </div>
-
     </section>
 
-    <!-- Currency picker popover -->
-    <div class="picker-overlay" id="picker-overlay" hidden role="dialog" aria-modal="true" aria-label="Select currency">
-      <div class="picker">
-        <div class="picker__header">
-          <input class="picker__search" type="search" id="picker-search" placeholder="Search currencies..."
-            aria-label="Search currencies">
-          <button class="picker__close" id="picker-close" aria-label="Close currency picker">
-            <img src="./assets/images/icon-delete.svg" alt="" aria-hidden="true">
+    <main class=" wrapper main">
+
+      <!-- Converter -->
+      <section class="converter" aria-label="Currency converter">
+        <h1 class="converter__title">Check the rate</h1>
+
+        <div class="converter__cards">
+          <div class="converter__card">
+            <label class="converter__label" for="send-amount">Send</label>
+            <div class="converter__row">
+              <input class="converter__amount" id="send-amount" type="text" value="1,000" aria-label="Amount to send">
+              <button class="currency-btn" id="send-currency-btn" aria-label="Select send currency"
+                aria-haspopup="dialog">
+                <span class="currency-btn__flag" id="send-flag"></span>
+                <span class="currency-btn__code" id="send-code">USD</span>
+                <img src="./assets/images/icon-chevron-down.svg" alt="" aria-hidden="true">
+              </button>
+            </div>
+          </div>
+
+          <div class="converter__swap">
+            <button class="swap-btn" id="swap-btn" aria-label="Swap send and receive currencies">
+              <img src="./assets/images/icon-exchange-vertical.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+
+          <div class="converter__card">
+            <p class="converter__label">Receive</p>
+            <div class="converter__row">
+              <span class="converter__amount converter__amount--receive" id="receive-amount" aria-live="polite"
+                aria-label="Converted amount">853.00</span>
+              <button class="currency-btn" id="receive-currency-btn" aria-label="Select receive currency"
+                aria-haspopup="dialog">
+                <span class="currency-btn__flag" id="receive-flag"></span>
+                <span class="currency-btn__code" id="receive-code">EUR</span>
+                <img src="./assets/images/icon-chevron-down.svg" alt="" aria-hidden="true">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="converter__bottom">
+          <p class="converter__rate" id="rate-display" aria-live="polite">1 USD = 0.8530 EUR</p>
+          <div class="converter__actions">
+            <button class="btn-fav" id="fav-btn" aria-pressed="false">
+              <img src="./assets/images/icon-star-filled.svg" alt="" aria-hidden="true">
+              <span id="fav-text">Favorited</span>
+            </button>
+            <button class="btn-log" id="log-btn">Log conversion</button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Currency picker popover -->
+      <div class="picker-overlay" id="picker-overlay" hidden role="dialog" aria-modal="true"
+        aria-label="Select currency">
+        <div class="picker">
+          <div class="picker__header">
+            <input class="picker__search" type="search" id="picker-search" placeholder="Search currencies..."
+              aria-label="Search currencies">
+            <button class="picker__close" id="picker-close" aria-label="Close currency picker">
+              <img src="./assets/images/icon-delete.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <div class="picker__body" id="picker-body">
+            <!-- Dynamic: populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs-wrapper">
+        <button class="tabs-dropdown" id="tabs-dropdown" aria-expanded="false">
+          <span id="active-tab-label">History</span>
+          <img src="./assets/images/icon-chevron-down.svg" alt="" aria-hidden="true">
+        </button>
+        <nav class="tabs" id="tabs-nav" aria-label="Data views" hidden>
+          <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="panel-history"
+            data-tab="history" data-label="History">History</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="panel-compare" data-tab="compare"
+            data-label="Compare">Compare</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="panel-favorites" data-tab="favorites"
+            data-label="Favorites">
+            Favorites <span class="badge" id="fav-badge" aria-label="0 favorites">0</span>
           </button>
-        </div>
-        <div class="picker__body" id="picker-body">
-          <!-- Dynamic: populated by JS -->
-        </div>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="panel-log" data-tab="log"
+            data-label="Log">
+            Log <span class="badge" id="log-badge" aria-label="0 logged">0</span>
+          </button>
+        </nav>
       </div>
-    </div>
+      <!-- Tab panel: History -->
+      <div class="tab-panel tab-panel--active" id="panel-history" role="tabpanel">
 
-    <!-- Tabs -->
-    <div class="tabs-wrapper">
-      <button class="tabs-dropdown" id="tabs-dropdown" aria-expanded="false">
-        <span id="active-tab-label">History</span>
-        <img src="./assets/images/icon-chevron-down.svg" alt="" aria-hidden="true">
-      </button>
-      <nav class="tabs" id="tabs-nav" aria-label="Data views" hidden>
-        <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="panel-history" data-tab="history"
-          data-label="History">History</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-compare" data-tab="compare"
-          data-label="Compare">Compare</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-favorites" data-tab="favorites"
-          data-label="Favorites">
-          Favorites <span class="badge" id="fav-badge" aria-label="0 favorites">0</span>
-        </button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-log" data-tab="log" data-label="Log">
-          Log <span class="badge" id="log-badge" aria-label="0 logged">0</span>
-        </button>
-      </nav>
-    </div>
-    <!-- Tab panel: History -->
-    <div class="tab-panel tab-panel--active" id="panel-history" role="tabpanel">
+        <div class="history-controls">
 
-      <div class="history-controls">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <p class="stat-card__label">Open</p>
+              <p class="stat-card__value" id="stat-open">—</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-card__label">Last</p>
+              <p class="stat-card__value" id="stat-last">—</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-card__label">Change</p>
+              <p class="stat-card__value" id="stat-change">—</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-card__label">% change</p>
+              <p class="stat-card__value" id="stat-pct">—</p>
+            </div>
+          </div>
 
-        <div class="stats-grid">
-          <div class="stat-card">
-            <p class="stat-card__label">Open</p>
-            <p class="stat-card__value" id="stat-open">—</p>
+          <div class="range-selector" role="group" aria-label="Chart date range">
+            <button class="range-btn" data-range="1d">1d</button>
+            <button class="range-btn" data-range="1w">1w</button>
+            <button class="range-btn range-btn--active" data-range="1m">1m</button>
+            <button class="range-btn" data-range="3m">3m</button>
+            <button class="range-btn" data-range="1y">1y</button>
+            <button class="range-btn" data-range="5y">5y</button>
           </div>
-          <div class="stat-card">
-            <p class="stat-card__label">Last</p>
-            <p class="stat-card__value" id="stat-last">—</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-card__label">Change</p>
-            <p class="stat-card__value" id="stat-change">—</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-card__label">% change</p>
-            <p class="stat-card__value" id="stat-pct">—</p>
-          </div>
+
         </div>
 
-        <div class="range-selector" role="group" aria-label="Chart date range">
-          <button class="range-btn" data-range="1d">1d</button>
-          <button class="range-btn" data-range="1w">1w</button>
-          <button class="range-btn range-btn--active" data-range="1m">1m</button>
-          <button class="range-btn" data-range="3m">3m</button>
-          <button class="range-btn" data-range="1y">1y</button>
-          <button class="range-btn" data-range="5y">5y</button>
-        </div>
-
-      </div>
-
-      <div class="chart-section">
-        <div class="chart-wrap">
-          <div class="chart-section__header">
-            <span class="chart-section__pair" id="chart-pair">USD/EUR</span>
-            <span class="chart-section__meta" id="chart-meta"></span>
-          </div>
-          <canvas id="rate-chart" aria-label="Rate history chart" role="img"></canvas>
-          <!-- <div class="chart-wrap__y-labels" id="y-labels" aria-hidden="true"></div>
+        <div class="chart-section">
+          <div class="chart-wrap">
+            <div class="chart-section__header">
+              <span class="chart-section__pair" id="chart-pair">USD/EUR</span>
+              <span class="chart-section__meta" id="chart-meta"></span>
+            </div>
+            <canvas id="rate-chart" aria-label="Rate history chart" role="img"></canvas>
+            <!-- <div class="chart-wrap__y-labels" id="y-labels" aria-hidden="true"></div>
           <div class="chart-wrap__x-labels" id="x-labels" aria-hidden="true"></div> -->
+          </div>
+
+        </div>
+
+        <!-- History error state -->
+        <div class="empty-state" id="history-error" hidden>
+          <p class="empty-state__title">No chart data available</p>
+          <p class="empty-state__body">We couldn't load rate history for <span id="error-pair">USD/EUR</span> right now.
+            This usually clears up in a minute.</p>
         </div>
 
       </div>
 
-      <!-- History error state -->
-      <div class="empty-state" id="history-error" hidden>
-        <p class="empty-state__title">No chart data available</p>
-        <p class="empty-state__body">We couldn't load rate history for <span id="error-pair">USD/EUR</span> right now.
-          This usually clears up in a minute.</p>
+      <!-- Tab panel: Compare -->
+      <div class="tab-panel" id="panel-compare" role="tabpanel" hidden>
+        <div class="compare-header">
+          <p class="compare-header__title">Multi-currency</p>
+          <p class="compare-header__meta" id="compare-meta">1,000 from USD · <span id="compare-count">0 pairs</span></p>
+        </div>
+        <ul class="compare-list" id="compare-list" aria-label="Currency comparisons">
+          <!-- Dynamic: populated by JS -->
+        </ul>
+        <div class="empty-state" id="compare-empty" hidden>
+          <p class="empty-state__title">No comparison available</p>
+          <p class="empty-state__body">Enter an amount in Send above to see what your money is worth in other
+            currencies.
+          </p>
+        </div>
       </div>
 
-    </div>
+      <!-- Tab panel: Favorites -->
+      <div class="tab-panel" id="panel-favorites" role="tabpanel" hidden>
+        <div class="panel-header">
+          <p class="panel-header__title">Pinned pairs</p>
+          <span class="panel-header__count" id="favs-count">0 favorites</span>
+        </div>
+        <ul class="favs-list" id="favs-list" aria-label="Pinned currency pairs">
+          <!-- Dynamic: populated by JS -->
+        </ul>
+        <div class="empty-state" id="favs-empty">
+          <p class="empty-state__title">No pinned pairs yet</p>
+          <p class="empty-state__body">Pin a pair to track its rate here. Tap the star icon on any conversion or
+            comparison row.</p>
+        </div>
+      </div>
 
-    <!-- Tab panel: Compare -->
-    <div class="tab-panel" id="panel-compare" role="tabpanel" hidden>
-      <div class="compare-header">
-        <p class="compare-header__title">Multi-currency</p>
-        <p class="compare-header__meta" id="compare-meta">1,000 from USD · <span id="compare-count">0 pairs</span></p>
+      <!-- Tab panel: Log -->
+      <div class="tab-panel" id="panel-log" role="tabpanel" hidden>
+        <div class="panel-header">
+          <p class="panel-header__title">Conversion log</p>
+          <button class="btn-clear" id="clear-log-btn">Clear all</button>
+        </div>
+        <ul class="log-list" id="log-list" aria-label="Conversion history">
+          <!-- Dynamic: populated by JS -->
+        </ul>
+        <div class="empty-state" id="log-empty">
+          <p class="empty-state__title">No conversions logged yet</p>
+          <p class="empty-state__body">Every conversion is recorded here automatically when you tap Log conversion. Your
+            log is private to this session and this browser.</p>
+        </div>
       </div>
-      <ul class="compare-list" id="compare-list" aria-label="Currency comparisons">
-        <!-- Dynamic: populated by JS -->
-      </ul>
-      <div class="empty-state" id="compare-empty" hidden>
-        <p class="empty-state__title">No comparison available</p>
-        <p class="empty-state__body">Enter an amount in Send above to see what your money is worth in other currencies.
-        </p>
-      </div>
-    </div>
 
-    <!-- Tab panel: Favorites -->
-    <div class="tab-panel" id="panel-favorites" role="tabpanel" hidden>
-      <div class="panel-header">
-        <p class="panel-header__title">Pinned pairs</p>
-        <span class="panel-header__count" id="favs-count">0 favorites</span>
-      </div>
-      <ul class="favs-list" id="favs-list" aria-label="Pinned currency pairs">
-        <!-- Dynamic: populated by JS -->
-      </ul>
-      <div class="empty-state" id="favs-empty">
-        <p class="empty-state__title">No pinned pairs yet</p>
-        <p class="empty-state__body">Pin a pair to track its rate here. Tap the star icon on any conversion or
-          comparison row.</p>
-      </div>
-    </div>
+    </main>
 
-    <!-- Tab panel: Log -->
-    <div class="tab-panel" id="panel-log" role="tabpanel" hidden>
-      <div class="panel-header">
-        <p class="panel-header__title">Conversion log</p>
-        <button class="btn-clear" id="clear-log-btn">Clear all</button>
-      </div>
-      <ul class="log-list" id="log-list" aria-label="Conversion history">
-        <!-- Dynamic: populated by JS -->
-      </ul>
-      <div class="empty-state" id="log-empty">
-        <p class="empty-state__title">No conversions logged yet</p>
-        <p class="empty-state__body">Every conversion is recorded here automatically when you tap Log conversion. Your
-          log is private to this session and this browser.</p>
-      </div>
-    </div>
 
-  </main>
+  
 
 </body>
 
