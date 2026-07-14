@@ -3,6 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding-block: var(--spacing-200);   
+  padding-inline: var(--spacing-200); 
+ 
+}
+
+
+/* Mobile First - Clean & Modern */
+.header__logo {
+  width: clamp(107.1px, 12vw, 139px);
+  height: auto;
+  aspect-ratio: 139 / 26;  /* Maintains exact ratio */
 }
 
 .header__meta {
@@ -17,6 +29,12 @@
 .ticker {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--neutral-700);
+  overflow: hidden;
+  height: 36px;
+
+  /* padding-block: var(--spacing-250);  
+  padding-inline: var(--spacing-150);  */
 }
 
 .ticker__label {
@@ -26,31 +44,42 @@
   font-size: var(--text-6-size);
   font-weight: 700;
   letter-spacing: 0.1em;
+
+  
+  text-transform: uppercase;
+  padding: var(--spacing-150)  var(--spacing-150);
+  white-space: nowrap;
   
 }
 
 
 .ticker__dot {
-   width: 5px;
-  height: 7px;
+
+   width: 8px;
+  height: 8px;
   border-radius: var(--radius-full);
   background-color: var(--neutral-900);
   display: inline-block;
+  margin-right: var(--spacing-075);
 }
 
 
 .ticker__track {
   overflow: hidden;
   flex: 1;
-
+ 
 }
 
 .ticker__list {
   display: inline-flex;
   gap: var(--spacing-300);
-  padding: 0 var(--spacing-200);
+ 
+
+  
   animation: ticker-scroll 22s linear infinite;
   white-space: nowrap;
+
+  
 }
 
 .ticker__list:hover {
@@ -63,9 +92,10 @@
 }
 
 .ticker__item {
-  display: inline-flex;
+   display: inline-flex;
   align-items: center;
   gap: var(--spacing-075);
+  padding: 0 var(--spacing-150) 0 var(--spacing-150);
 }
 
 .ticker__pair {
@@ -958,7 +988,10 @@
 /* ===== TABLET ===== */
 @media (min-width: 768px) {
 
- 
+   .ticker__label,
+  .ticker__item {
+    padding: var(--spacing-150) var(--spacing-250);
+  }
 
   /* Converter side by side */
   .converter__cards {
@@ -1052,6 +1085,10 @@
 /* ===== DESKTOP ===== */
 @media (min-width: 1280px) {
 
+  .header {
+     padding-block: var(--spacing-300); 
+    padding-inline: var(--spacing-250); 
+  }
   /* Stats and range on same row */
   .history-controls {
     display: flex;
@@ -1074,18 +1111,5 @@
   }
 
  
-  .picker-overlay {
-    background: transparent;
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-
-  .picker {
-    border-radius: var(--radius-12);
-    margin-top: 200px;
-    margin-right: 180px;
-    max-height: 400px;
-    width: 320px;
-    border: 1px solid var(--neutral-600);
-  }
+  
 }

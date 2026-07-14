@@ -58,11 +58,23 @@ const renderList = (query = '') => {
 };
 // --- Open / Close ---
 // Open the picker and set which currency it is for
-export const openPicker = (forWhich) => {
+
+
+export const openPicker = (forWhich, buttonEl) => {
   pickerFor = forWhich;
   pickerSearch.value = '';
   renderList();
+  
+  // Position picker below the button that was clicked
+  const rect = buttonEl.getBoundingClientRect();
   pickerOverlay.hidden = false;
+  
+  const picker = document.querySelector('.picker');
+  picker.style.position = 'fixed';
+  picker.style.top = `${rect.bottom + 8}px`;
+  picker.style.left = `${rect.left}px`;
+  picker.style.width = '320px';
+  
   pickerSearch.focus();
 };
 

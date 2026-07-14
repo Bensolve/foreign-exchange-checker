@@ -64,8 +64,8 @@ const recalculate = () => {
 sendAmountEl.addEventListener('input', recalculate);
 
 // Open picker when currency buttons clicked
-document.getElementById('send-currency-btn').addEventListener('click', () => openPicker('send'));
-document.getElementById('receive-currency-btn').addEventListener('click', () => openPicker('receive'));
+document.getElementById('send-currency-btn').addEventListener('click', (e) => openPicker('send', e.currentTarget));
+document.getElementById('receive-currency-btn').addEventListener('click', (e) => openPicker('receive', e.currentTarget));
 
 // Swap send and receive currencies
 document.getElementById('swap-btn').addEventListener('click', () => {
