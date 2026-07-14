@@ -143,6 +143,7 @@
   background-color: var(--neutral-600);
   border-radius: var(--radius-12);
 
+  padding: var(--spacing-200);
  
 }
 
@@ -1016,6 +1017,7 @@
   .converter__card {
     flex: 1;
     margin-bottom: 0;
+    padding:  var(--spacing-250);
   }
 
   .converter__swap {
