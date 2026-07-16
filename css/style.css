@@ -215,10 +215,28 @@
   background: var(--neutral-500);
 }
 
+
+.converter__bottom{
+
+  display: flex;
+  flex-direction: column;      /* Stacks children vertically */
+  gap: var(--spacing-200);     /* 16px space BETWEEN children (button & rate) */
+  
+  margin-block: var(--spacing-200); /* 16px outside the box */
+  padding-block: var(--spacing-200); /* 16px inside the box */
+  padding-inline: var(--spacing-200);
+}
+
+
+
 .converter__rate {
   text-align: center;
   font-size: var(--text-6-size);
   color: var(--neutral-100);
+  font-weight: var(--text-6-weight);      /* 400 */
+  line-height: var(--text-6-line-height); /* 100% → 1 */
+  letter-spacing: var(--text-6-letter-spacing); /* 0px */
+
  
 }
 
@@ -1038,10 +1056,16 @@
 
   /* Rate and actions on same row */
   .converter__bottom {
-    display: flex;
+    
+   flex-direction: row;         /* Goes horizontal */
     align-items: center;
     justify-content: space-between;
-    margin-top: var(--spacing-150);
+    gap: var(--spacing-200);     /* Now applies horizontally (optional, but safe) */
+    
+    padding-block: var(--spacing-250); /* 20px */
+    /* margin-block resets to 0 if not needed on large */
+    margin-block: 0;
+  
   }
 
   .converter__rate {
