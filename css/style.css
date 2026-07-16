@@ -147,6 +147,13 @@
  
 }
 
+.converter__cards {
+   display: flex;
+  flex-direction: column;
+  
+  gap: var(--spacing-200);
+}
+
 .converter__label {
   display: block;
   font-size: var(--text-6-size);
@@ -189,9 +196,7 @@
   display: flex;
   justify-content: center;
   
-  margin: 100px;
 
-  border: 2px solid red'
 }
 
 .swap-btn {
@@ -1016,9 +1021,9 @@
 
   /* Converter side by side */
   .converter__cards {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-125);
+   flex-direction: row; 
+   align-items: center;
+    gap: var(--spacing-300);
   }
 
   .converter__card {
